@@ -25,7 +25,7 @@ void multArrays(const int[], const int[], int[], const int);
 void displayArray(const int[], const int);
 int sumOddArray(const int[], const int);
 bool isAllPositive(const int[], const int);
-bool avgOddArray(const int[], const int, int&);
+bool avgOddArray(const int[], const int, double&);
 void revertNumbers(int arr[], const int size);
 
 /**
@@ -119,8 +119,9 @@ void fillInArray(int arr[], const int size){
  * to the corresponding value at the destination array. NOTE: precondition
  * is that the arrays have the same size.
  * <BR>
- * @param arrSource The array containing the destination elements.
- * @param arrDest The array containing the source elements.
+ * @param arrQuantity ...
+ * @param arrPrice ...
+ * @param arrTotal ...
  * @param size The size of the arrays.
  */
 void multArrays(const int arrQuantity[], const int arrPrice[], int arrTotal[], const int size){
@@ -164,7 +165,7 @@ bool isAllPositive(const int arr[], const int size){
 
 // Finds the average of all the odd numbers in the array and stores this in the last argument
 // returns false if there are no odd numbers in the array, true otherwise.
-bool avgOddArray(const int arr[], const int size, int& avgOdd){
+bool avgOddArray(const int arr[], const int size, double& avgOdd){
   //@TODO: You will need to complete this. Including making the appropriate comment header
   return false;
 }
