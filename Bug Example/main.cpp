@@ -173,7 +173,7 @@ void multArrays(const int arrQuantity[], const int arrPrice[], int arrTotal[][2]
  * array. In addition the function sums up the value of all the elements and
  * print the total.
  * <BR>
- * @param ar The array containing the values
+ * @param arr The 2D array containing the totals without VAT and with VAT.
  * @param size The size of the array.
  */
 void displayArray(const int arr[][2], const int size){
