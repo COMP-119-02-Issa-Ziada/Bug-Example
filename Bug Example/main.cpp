@@ -89,20 +89,23 @@ int printMenu(){
   int choice;
 
   do {
-    cout << "\n == MENU ==";
-    cout << "\n1) Enter quantity";
-    cout << "\n2) Calculate total";
-    cout << "\n3) Print total";
-    cout << "\n4) All positive";
-    cout << "\n0) Exit";
+      cout << "\n == MENU ==";
+      cout << "\n1) Enter quantity";
+      cout << "\n2) Calculate total";
+      cout << "\n3) Print total";
+      cout << "\n4) All positive";
+      cout << "\n5) Sum odd numbers";
+      cout << "\n6) Average odd numbers";
+      cout << "\n7) Revert numbers";
+      cout << "\n0) Exit";
 
     cout << "\nEnter the choice: ";
     cin >> choice;
 
-    if (choice < 0 || choice > 4){
-      cout << "\nWrong choice, try again.";
-    }
-  } while (choice < 0 || choice > 4);
+      if (choice < 0 || choice > 7){
+        cout << "\nWrong choice, try again.";
+      }
+      } while (choice < 0 || choice > 7);
   return choice;
 }
 
