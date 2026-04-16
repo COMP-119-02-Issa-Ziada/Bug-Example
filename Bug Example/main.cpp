@@ -70,8 +70,8 @@ int main() {
       case 0:
         // No code needed
         break;
-      default:
-        assert(true);
+        default:
+            cout << "\nInvalid choice.";
     }
   } while (choice != 0);
 
