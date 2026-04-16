@@ -7,9 +7,9 @@
  *                   the code with a comment on the fix you did
  *                3) There are a four functions that are not completed, you need to
  *                   complete them and also update the menu and the main function
- *  \author    Harald Gjermundrod
+ *  \author    Issa Ziada
  *  \version   0.1
- *  \date      20/10/2025
+ *  \date      16/04/2026
  *  \bug       Many logical bugs
  *  \copyright University of Nicosia.
  */
