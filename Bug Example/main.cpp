@@ -196,12 +196,33 @@ bool isAllPositive(const int arr[], const int size){
     return ret;
 }
     
-
-// Finds the average of all the odd numbers in the array and stores this in the last argument
-// returns false if there are no odd numbers in the array, true otherwise.
+/**
+ * <code>avgOddArray</code> finds the average of all odd numbers in the array.
+ * <BR>
+ * @param arr The array containing the values.
+ * @param size The size of the array.
+ * @param avgOdd The average of all odd numbers in the array.
+ * @return Returns true if the array contains odd numbers, false otherwise.
+ */
 bool avgOddArray(const int arr[], const int size, double& avgOdd){
-  //@TODO: You will need to complete this. Including making the appropriate comment header
-  return false;
+  assert(size > 0);
+
+  int sum = 0;
+  int count = 0;
+
+  for (int i = 0; i < size; ++i){
+    if (arr[i] % 2 != 0){
+      sum += arr[i];
+      ++count;
+    }
+  }
+
+  if (count == 0){
+    return false;
+  }
+
+  avgOdd = static_cast<double>(sum) / count;
+  return true;
 }
 
 // You revert the numbers (in place) of the array. I.e. if your array have the values [1, 3, 4, 7, 11] then
