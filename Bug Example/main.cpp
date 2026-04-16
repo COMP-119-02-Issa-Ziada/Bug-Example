@@ -25,7 +25,7 @@ const double VAT = 0.21;
 int printMenu();
 void fillInArray(int[], const int);
 void multArrays(const int[], const int[], int[], const int);
-void displayArray(const int[], const int);
+void displayArray(const int[][2], const int);
 int sumOddArray(const int[], const int);
 bool isAllPositive(const int[], const int);
 bool avgOddArray(const int[], const int, double&);
@@ -178,15 +178,19 @@ void multArrays(const int arrQuantity[], const int arrPrice[], int arrTotal[][2]
  * @param ar The array containing the values
  * @param size The size of the array.
  */
-void displayArray(const int arr[], const int size){
-  int sum = 0;
+void displayArray(const int arr[][2], const int size){
+  int sumNoVat = 0;
+  int sumWithVat = 0;
 
-    for (int i = 0; i < size; ++i){
-        cout << "\nValue at " << i << ": " << arr[i];
-        sum += arr[i];
+  for (int i = 0; i < size; ++i){
+    cout << "\nValue at " << i << " without VAT: " << arr[i][0];
+    cout << "\nValue at " << i << " with VAT: " << arr[i][1];
+    sumNoVat += arr[i][0];
+    sumWithVat += arr[i][1];
   }
 
-  cout << "\nThe total is: " << sum;
+  cout << "\nThe total without VAT is: " << sumNoVat;
+  cout << "\nThe total with VAT is: " << sumWithVat;
 }
 
 /**
