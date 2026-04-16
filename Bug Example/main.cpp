@@ -19,6 +19,7 @@
 #include <cstdlib>
 #include <ctime>
 using namespace std;
+const double VAT = 0.21;
 
 // Function prototypes
 int printMenu();
@@ -164,7 +165,7 @@ void multArrays(const int arrQuantity[], const int arrPrice[], int arrTotal[], c
   assert (size > 0);
 
     for (int i = 0; i < size; ++i){
-        arrTotal[i] = arrQuantity[i] * arrPrice[i];
+        arrTotal[i] = arrQuantity[i] * static_cast<int>(arrPrice[i] * (1 + VAT));
     }
 }
 
