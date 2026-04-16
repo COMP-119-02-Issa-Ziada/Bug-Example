@@ -40,39 +40,57 @@ int main() {
   // Initialize array price
   int price[SIZE] = {12, 4, 8, 1, 17, 2, 4, 2, 9, 1};
   // Declare array quantity and total
-  int quantity[SIZE], total[SIZE];
+    int quantity[SIZE] = {0}, total[SIZE] = {0};
 
   // Interactive menu
   do {
     choice = printMenu();
 
-    switch (choice){
-      // Enter quantity
-      case 1:
-        fillInArray(quantity, SIZE);
-        break;
-      // Calculate total
-      case 2:
-        multArrays(quantity, price,total , SIZE);
-        break;
-      // Print total
-      case 3:
-        displayArray(total, SIZE);
-        break;
-      // All is positve
+      switch (choice){
+        // Enter quantity
+        case 1:
+          fillInArray(quantity, SIZE);
+          break;
+        // Calculate total
+        case 2:
+          multArrays(quantity, price, total, SIZE);
+          break;
+        // Print total
+        case 3:
+          displayArray(total, SIZE);
+          break;
+        // All positive
         case 4:
-            if (isAllPositive(quantity, SIZE))
-                cout << "\nAll elements of the array are positive";
-            else
-                cout << "\nAt-least one of the elements are not positive";
-            break;
-      // Exit
-      case 0:
-        // No code needed
-        break;
+          if (isAllPositive(quantity, SIZE))
+            cout << "\nAll elements of the array are positive";
+          else
+            cout << "\nAt-least one of the elements are not positive";
+          break;
+        // Sum odd numbers
+        case 5:
+          cout << "\nThe sum of odd numbers is: " << sumOddArray(quantity, SIZE);
+          break;
+        // Average odd numbers
+        case 6: {
+          double avgOdd;
+          if (avgOddArray(quantity, SIZE, avgOdd))
+            cout << "\nThe average of odd numbers is: " << avgOdd;
+          else
+            cout << "\nThere are no odd numbers in the array";
+          break;
+        }
+        // Revert numbers
+        case 7:
+          revertNumbers(quantity, SIZE);
+          cout << "\nThe array has been reverted.";
+          break;
+        // Exit
+        case 0:
+          // No code needed
+          break;
         default:
-            cout << "\nInvalid choice.";
-    }
+          cout << "\nInvalid choice.";
+      }
   } while (choice != 0);
 
   cout << "\nHave a nice day:)" << endl;
