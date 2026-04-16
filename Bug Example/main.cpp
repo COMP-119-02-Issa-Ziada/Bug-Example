@@ -182,12 +182,12 @@ void displayArray(const int arr[][2], const int size){
   int sumWithVat = 0;
 
   for (int i = 0; i < size; ++i){
-    cout << "\nValue at " << i << " without VAT: " << arr[i][0];
-    cout << "\nValue at " << i << " with VAT: " << arr[i][1];
+      cout << "\nIndex " << i
+           << " | Without VAT: " << arr[i][0]
+           << " | With VAT: " << arr[i][1];
     sumNoVat += arr[i][0];
     sumWithVat += arr[i][1];
   }
-
   cout << "\nThe total without VAT is: " << sumNoVat;
   cout << "\nThe total with VAT is: " << sumWithVat;
 }
