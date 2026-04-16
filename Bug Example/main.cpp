@@ -151,9 +151,9 @@ void multArrays(const int arrQuantity[], const int arrPrice[], int arrTotal[], c
 void displayArray(const int arr[], int size){
   int sum = 0;
 
-  for (int i = 1; i < size; ++i){
-    cout << "\nValue at " << i << ": " << arr[i];
-    sum += arr[i];
+    for (int i = 0; i < size; ++i){
+        cout << "\nValue at " << i << ": " << arr[i];
+        sum += arr[i];
   }
 
   cout << "\nThe total is: " << sum;
