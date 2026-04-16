@@ -93,7 +93,7 @@ int printMenu(){
     cout << "\n1) Enter quantity";
     cout << "\n2) Calculate total";
     cout << "\n3) Print total";
-    cout<<  "\n4 All positive"
+    cout << "\n4) All positive";
     cout << "\n0) Exit";
 
     cout << "\nEnter the choice: ";
@@ -180,8 +180,13 @@ int sumOddArray(const int arr[], const int size){
   return sum;
 }
 
-// If all the values in the array are positive return true
-//returns false for any element of 0 or negative number
+/**
+ * <code>isAllPositive</code> checks whether all elements in the array are positive.
+ * <BR>
+ * @param arr The array containing the values.
+ * @param size The size of the array.
+ * @return Returns true if all elements are positive, false otherwise.
+ */
 bool isAllPositive(const int arr[], const int size){
     assert (size>0);
     bool ret = true;
