@@ -24,13 +24,12 @@ const double VAT = 0.21;
 // Function prototypes
 int printMenu();
 void fillInArray(int[], const int);
-void multArrays(const int[], const int[], int[], const int);
+void multArrays(const int[], const int[], int[][2], const int);
 void displayArray(const int[][2], const int);
 int sumOddArray(const int[], const int);
 bool isAllPositive(const int[], const int);
 bool avgOddArray(const int[], const int, double&);
 void revertNumbers(int arr[], const int size);
-
 /**
  * <code>main</code> is the main function of this program.
  * <BR>
