@@ -93,7 +93,7 @@ int printMenu(){
     cout << "\n1) Enter quantity";
     cout << "\n2) Calculate total";
     cout << "\n3) Print total";
-    cout<<  "\4 All positive"
+    cout<<  "\n4 All positive"
     cout << "\n0) Exit";
 
     cout << "\nEnter the choice: ";
