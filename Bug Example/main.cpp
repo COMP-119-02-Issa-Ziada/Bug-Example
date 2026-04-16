@@ -48,8 +48,8 @@ srand(time(NULL));
       price[i] = rand() % 41 + 10; // range 10–50
     }
   // Declare array quantity and total
-    int quantity[SIZE] = {0}, total[SIZE] = {0};
-
+    int quantity[SIZE] = {0}, total[SIZE][2] = {0};
+    
   // Interactive menu
   do {
     choice = printMenu();
@@ -161,12 +161,13 @@ void fillInArray(int arr[], const int size){
  * @param arrTotal ...
  * @param size The size of the arrays.
  */
-void multArrays(const int arrQuantity[], const int arrPrice[], int arrTotal[], const int size){
-  assert (size > 0);
+void multArrays(const int arrQuantity[], const int arrPrice[], int arrTotal[][2], const int size){
+  assert(size > 0);
 
-    for (int i = 0; i < size; ++i){
-        arrTotal[i] = arrQuantity[i] * static_cast<int>(arrPrice[i] * (1 + VAT));
-    }
+  for (int i = 0; i < size; ++i){
+    arrTotal[i][0] = arrQuantity[i] * arrPrice[i];
+    arrTotal[i][1] = arrQuantity[i] * static_cast<int>(arrPrice[i] * (1 + VAT));
+  }
 }
 
 /**
