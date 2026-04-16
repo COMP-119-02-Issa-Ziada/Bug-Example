@@ -62,9 +62,9 @@ int main() {
       // All is positve
         case 4:
             if (isAllPositive(quantity, SIZE))
-                cout<< "\nAll elements of array is positive";
+                cout << "\nAll elements of the array are positive";
             else
-                cout<<"\nAt-least one of the elements are not positive";
+                cout << "\nAt-least one of the elements are not positive";
             break;
       // Exit
       case 0:
