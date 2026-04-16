@@ -102,7 +102,7 @@ int printMenu(){
     if (choice < 0 || choice > 4){
       cout << "\nWrong choice, try again.";
     }
-  } while (choice < 0 || choice > 5);
+  } while (choice < 0 || choice > 4);
   return choice;
 }
 
